@@ -1,0 +1,20 @@
+[
+    {
+        "href": "https://twitter.com",
+        "img-src": "https://landonhotel.com/images/socialmedia/twitter.png",
+        "class": "icon",
+        "alt-text": "icon for twitter"
+    },
+    {
+        "href": "http://www.facebook.com",
+        "img-src": "https://landonhotel.com/images/socialmedia/facebook.png",
+        "class": "icon",
+        "alt-text": "icon for facebook"
+    },
+    {
+        "href": "http://www.youtube.com",
+        "img-src": "https://landonhotel.com/images/socialmedia/youtube.png",
+        "class": "icon",
+        "alt-text": "icon for youtube"
+    }
+]
