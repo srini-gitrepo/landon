@@ -2,7 +2,7 @@ var AWS = require('aws-sdk');
 var fs = require('fs');
 
 AWS.config.update({
-    region: 'us-east-1'
+    region: 'ap-south-1'
 });
 
 console.log('Writing entries to Welcome Links table.');
@@ -20,19 +20,19 @@ welcomeLinksData.forEach(function (welcomeLink) {
         TableName: 'WelcomeLinks',
         Item: {
             src: welcomeLink.src,
-            alt: galleryImage.alt,
-            className: className
+            alt: welcomeLink.alt,
+            class: className
         }
     };
 
     dynamodb.put(params, function (err, data) {
         if (err)
             console.error(
-                'Unable to load data into table for gallery images',
-                galleryImage.src,
+                'Unable to load data into table for welcome link',
+                welcomeLink.src,
                 '. Error: ',
                 JSON.stringify(err, null, 2)
             );
-        else console.log('Added', galleryImage.src, 'to table.');
+        else console.log('Added', welcomeLink.src, 'to table.');
     });
 });
